@@ -48,6 +48,9 @@ textarea {
 .main-nav {
   display: flex;
   align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 .link-nav-color {
   fill: var(--brand-color);
@@ -64,7 +67,12 @@ textarea {
 .site-nav-list {
   color: var(--hover-color);
 }
-
+.items {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 50px;
+}
 .current {
   position: relative;
   color: var(--hover-color);
@@ -94,11 +102,17 @@ textarea {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.1;
   text-decoration: none;
   letter-spacing: 0.02em;
+}
+.mail {
+  width: 16px;
+}
+.phone {
+  width: 16px;
 }
 .icon {
   margin-right: 10px;
@@ -126,10 +140,10 @@ textarea {
   display: flex;
   margin-left: auto;
 }
-.items li {
+.items-li {
   margin-right: 30px;
 }
-.items li:last-child {
+.items-li:last-child {
   margin-right: 0;
 }
 .items-team {
@@ -141,6 +155,23 @@ textarea {
 }
 .items-team > .items-li:last-child {
   margin-right: 0;
+}
+.items .link-nav {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  height: 16px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .benefits-items {
   display: flex;
@@ -567,12 +598,14 @@ textarea {
 }
 
 /*футер*/
+.container-general-footer {
+  display: flex;
+}
 .container-footer {
   justify-content: flex-start;
   margin-left: 215px;
 }
 .link-footer-logo {
-  padding-top: 60px;
   padding-bottom: 28px;
 }
 .link-footer-adress {
@@ -595,8 +628,9 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 .background-footer {
-  display: inline-flex;
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .social-links-footer {
   display: flex;
@@ -604,9 +638,7 @@ textarea {
 }
 .social-footer {
   display: inline-block;
-  margin-top: 76px;
-  margin-bottom: 96px;
-  margin-left: 56px;
+  margin-left: 70px;
 }
 .social-footer p {
   color: var(--primary-white-color);
@@ -617,21 +649,26 @@ textarea {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
-.subscription {
-  display: inline-block;
-  margin-top: 72px;
-  margin-bottom: 93px;
-  margin-left: 94px;
-  margin-right: 214px;
+.subscribe {
+  margin-left: auto;
 }
-.subscription p {
-  color: var(--primary-white-color);
-  text-transform: uppercase;
+.subscribe p {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+
   margin-bottom: 20px;
+}
+.subscribe input {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: #2f303a;
+  padding: 16px;
+  width: 358px;
+  margin-right: 12px;
 }
 .social-icon-footer {
   fill: var(--primary-white-color);
@@ -654,7 +691,7 @@ textarea {
   background-color: var(--hover-color);
 }
 .subscribe {
-  margin-left: auto;
+  margin-left: 93px;
 }
 .subscribe p {
   font-weight: 700;
@@ -708,7 +745,8 @@ textarea {
 /*модал*/
 
 .backdrop {
-  top: o;
+  position: fixed;
+  top: 0;
   left: 0;
   opacity: 1;
 
@@ -835,6 +873,7 @@ textarea {
 }
 .label a {
   color: var(--hover-color);
+  outline: none;
   margin-left: 5px;
   text-decoration-skip-ink: none;
 }
@@ -847,7 +886,24 @@ textarea {
   color: var(--brand-color);
 }
 .checkbox {
-  margin-right: 9px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.checkbox:checked + .icon-checkbox {
+  background-color: var(--hover-color);
+  border-radius: 2px;
+  border-color: var(--hover-color);
+  background-origin: border-box;
+}
+.icon-checkbox {
+  width: 16px;
+  height: 15px;
+  border: var(--secondary-color) solid 2px;
+  border-radius: 2px;
+  margin-right: 8px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-person {
   position: absolute;
