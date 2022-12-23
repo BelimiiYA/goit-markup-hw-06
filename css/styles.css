@@ -600,10 +600,10 @@ textarea {
 /*футер*/
 .container-general-footer {
   display: flex;
+  justify-content: space-between;
 }
 .container-footer {
   justify-content: flex-start;
-  margin-left: 215px;
 }
 .link-footer-logo {
   padding-bottom: 28px;
@@ -638,7 +638,6 @@ textarea {
 }
 .social-footer {
   display: inline-block;
-  margin-left: 70px;
 }
 .social-footer p {
   color: var(--primary-white-color);
@@ -691,7 +690,7 @@ textarea {
   background-color: var(--hover-color);
 }
 .subscribe {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .subscribe p {
   font-weight: 700;
